@@ -49,13 +49,17 @@ input {
   border-radius: 8px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-between; /* Coloca o span à esquerda e o container de botões à direita */
+  justify-content: space-between;
   align-items: center;
-  padding: 0 0 0 16px; /* Adiciona um padding à esquerda para o texto não colar na borda */
+  padding: 0 0 0 16px;
 }
 
 #lista-tarefas span {
-  margin-right: 16px; /* Dá um espaço entre o texto e os botões */
+  margin-right: 16px;
+}
+
+#lista-tarefas span:focus {
+  outline: none;
 }
 
 .botoes-container {
