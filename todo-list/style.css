@@ -7,17 +7,14 @@ body {
   justify-content: center;
 }
 
-.conteudo {
-  width: 100%;
-  max-width: 600px;
-}
-
 .cartao {
   text-align: center;
   padding: 32px;
   border: 2px solid #1e90ff;
   border-radius: 16px;
   background: #fff;
+  width: 100%;
+  max-width: 600px;
 }
 
 h1 {
@@ -44,56 +41,58 @@ input {
 #lista-tarefas {
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 
 #lista-tarefas li {
-  padding: 10px 16px;
-  margin: 8px auto;
   border: 2px solid #1e90ff;
   border-radius: 8px;
+  margin-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Coloca o span à esquerda e o container de botões à direita */
+  align-items: center;
+  padding: 0 0 0 16px; /* Adiciona um padding à esquerda para o texto não colar na borda */
+}
+
+#lista-tarefas span {
+  margin-right: 16px; /* Dá um espaço entre o texto e os botões */
+}
+
+.botoes-container {
+  display: flex;
   align-items: center;
 }
 
-.remover {
-  color: red;
-  font-size: 20px;
+.remover, .editar, .salvar {
   font-weight: bold;
-  cursor: pointer;
+  margin: 0;
+  padding: 16px;
+}
+
+.salvar {
+  background: green;
+}
+
+.editar {
+  background: #2990f6;
+}
+
+.remover {
+  border-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: red;
+}
+
+#adicionar {
+  background: #1e90ff;
+  border-radius: 6px;
 }
 
 button {
-  padding: 16px;
+  padding: 12px;
   border: none;
-  border-radius: 8px;
-  background: #1e90ff;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-}
-
-.escuro {
-  background: #222;
-  color: #eee;
-}
-
-.escuro button {
-  background: #ff7b00;
-}
-
-.escuro .cartao {
-  background: #2c2c2c;
-  border-color: #ff7b00;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-.escuro button {
-  background: #ff7b00;
-}
-
-img {
-  width: 96px;
-  height: 96px;
-  border-radius: 8px;
 }
